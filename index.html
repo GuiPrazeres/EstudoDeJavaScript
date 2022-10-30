@@ -3,9 +3,46 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Somando Numeros</title>
+	<style type="text/css">
+		body{
+			font: normal 18pt Arial;
+		}
+		input{
+			font: normal 18pt Arianl;
+			width: 100px;
+		}
+		div#res{
+			margin-top: 20px;
+		}
+	</style>
 </head>
 <body>
-	<p>Hello</p>
+<!-- 
+Explicação
+
+name do formulario input é utilizado para identificar o valor daquela variável no backend
+id do formulario input foi utilizado como parametro para captação de valores digitados pelo usuario
+Tive que criar novas variaveis para receber essa string do input em forma de numero
+Outra variavel para obter o resultado da operação, e chamar pelo DOM a função de escrever na tela innerHTML.
+
+-->
+	<h1>Somando Valores</h1>	
+	<input type="number" name="ntext1" id="text1">
+	<input type="number" name="ntext2" id="text2">
+	<input type="button" value="Somar" onclick="somar()">
+	<div id="stringButton">Resultado</div>
+
+	<script>
+		function somar(){
+			var input1 = window.document.getElementById('text1')
+			var input2 = window.document.querySelector('input#text2') // Utilizando querySelector 
+			var stringButton = window.document.getElementById('stringButton') 
+			var n1 = new Number(input1.value)
+			var n2 = new Number(input2.value)
+			var resultadoSoma = n1+n2
+			stringButton.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${resultadoSoma}</strong>`
+		}
+	</script>
 </body>
 </html>
