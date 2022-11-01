@@ -1,9 +1,14 @@
 import modificador from './modificador.js';
-import ingredientes from './ingredientes.js';
+// import ingredientes from './ingredientes.js';
+
+var ingredientes = [ 'mel', 'água', 'sal', 'mostarda'];
+
+modificador.CapitalizarNovo(ingredientes);
+// modificador.CapitalizarNovo(ingredientes, 'nome');
 
 //console.log(modificador);
 
-//var ingredientes = [ 'mel', 'água', 'sal', 'mostarda'];
+
 // var resultadoCapitalizado = modificador.capitalizar(ingredientes);
 // var resultadoOrdenacao = modificador.ordenar(resultadoCapitalizado);
 // var resultadoCaixaAlta = modificador.caixaAlta(ingredientes)
@@ -12,8 +17,8 @@ import ingredientes from './ingredientes.js';
 // console.log(resultadoOrdenacao);
 // console.log(resultadoCaixaAlta);
 
-console.log(ingredientes);
-console.log(typeof ingredientes);
-console.log(Array.isArray(ingredientes));
-console.log(ingredientes[0]);
-console.log(ingredientes[1].nome);
+// console.log(ingredientes);
+// console.log(typeof ingredientes);
+// console.log(Array.isArray(ingredientes));
+// console.log(ingredientes[0]);
+// console.log(ingredientes[1].nome);
