@@ -1,24 +1,18 @@
 import modificador from './modificador.js';
-// import ingredientes from './ingredientes.js';
+import ingredientes from './ingredientes.js';
 
-var ingredientes = [ 'mel', 'água', 'sal', 'mostarda'];
+let ingredientesOrdenados = modificador.ordenar(ingredientes, 'nome');
+let conteinerIngredientes = document.getElementById('container-ingredientes');
 
-modificador.CapitalizarNovo(ingredientes);
-// modificador.CapitalizarNovo(ingredientes, 'nome');
+for(let ingrediente of ingredientesOrdenados){
+    let textoHTML =
+        `<div class="ingrediente">
+            <img src="img/${ingrediente.img}" />
+            <p class"nome-ingrediente">${ingrediente.nome}</p>
+        </div>`
+    ;
+    conteinerIngredientes.innerHTML += textoHTML;
+}
 
-//console.log(modificador);
 
 
-// var resultadoCapitalizado = modificador.capitalizar(ingredientes);
-// var resultadoOrdenacao = modificador.ordenar(resultadoCapitalizado);
-// var resultadoCaixaAlta = modificador.caixaAlta(ingredientes)
-
-// console.log(resultadoCapitalizado);
-// console.log(resultadoOrdenacao);
-// console.log(resultadoCaixaAlta);
-
-// console.log(ingredientes);
-// console.log(typeof ingredientes);
-// console.log(Array.isArray(ingredientes));
-// console.log(ingredientes[0]);
-// console.log(ingredientes[1].nome);
